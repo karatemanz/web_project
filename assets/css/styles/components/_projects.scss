@@ -1,0 +1,78 @@
+.reh-container {
+
+	height: 100%;
+	weight: 100%;
+
+}
+
+.reh-img {
+
+	height: 100%;
+	width: 100%;
+	min-width: 200px;
+	min-height: 400px;
+	padding: 0;
+	margin: 0;
+
+}
+
+.reh-img img {
+
+	height: 100%;
+	width: 100%;
+	min-width: 200px;
+	min-height: 400px;
+	padding: 0;
+	margin: 0;
+
+}
+
+.reh-img:hover {
+
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	min-width: 210px;
+	min-height: 410px;
+	max-height: 410px;
+	border: 5px solid $nav-color;
+	position: relative;
+	top: 0;
+	left: 0;
+	-webkit-box-shadow: 10px 10px 28px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 28px 1px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 28px 1px rgba(0,0,0,0.75);
+
+}
+
+/*Lighbox CSS*/
+.lightbox{
+
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top: 50px;
+	left: 0;
+	z-index: 20;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+
+.lightbox img{
+	max-width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+.lightbox .caption{
+	margin: 15px auto;
+	width: 50%;
+	text-align: center;
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 700;
+	color: #eee;
+}
