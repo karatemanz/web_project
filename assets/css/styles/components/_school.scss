@@ -1,0 +1,40 @@
+.acord {
+	
+	text-align: center;
+	margin: auto;
+	max-height: 70px;
+	max-width: 99%;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	background-color: #CFCCD9;
+	padding: 20px;
+
+	-webkit-box-shadow: 8px 8px 11px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 8px 8px 11px -5px rgba(0,0,0,0.75);
+	box-shadow: 8px 8px 11px -5px rgba(0,0,0,0.75);
+
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 0px solid #000000;
+
+}
+
+.acord-content {
+
+	max-height: 800px;
+	max-width: 99%;
+	height: 100%;
+	width: 100%;
+	text-align: left;
+	margin: auto;
+	display: block;
+
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-radius: 5px;
+	padding: 20px;
+
+}

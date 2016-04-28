@@ -1,0 +1,63 @@
+Project 1 - Class Portfolio Changelog and Other Answers
+
+1.) What did you change and enhance?
+
+-- Some major changes I made to my design is effective use of Javascript. I had
+-- a basic understanding of Javascript going into the project so I undestood the
+-- basics and played with them. In this second part I had a better idea of
+-- element selection and use of Ajax.
+
+PROJECT: I ended up changing my Projects page first by changing my todo list to use AJAX
+to perform PHP POST and GET operations to asynchronously add, mark, and remove
+items from a todo list.To this page I also added some other important projects
+that I had made in my Data Structures and Algorithm's classes.
+
+SCHOOLWORK: I ended up changing my Schoolwork page by using Javascript to make
+toggles that show and hide my term information and catagorized the classes by
+semester.
+
+EXTRA: I ended up changeing my Extracorricular page by using AJAX to change out
+the videos within an iframe by selecting from my custom card gallery. Secondly
+I hosted my audio files with SoundCloud so that users can play Vectors music
+from my web page. And hosting was neccesary to allow me to contain all of 
+my audio files.
+
+BETA: This is a fun page that I made that is basically a chat client that
+allows you to chat with fellow users of my page. It is in beta because I
+did not have true means of testing multiple users on my page.
+
+
+2.) If there was a third part what would you like to implement?
+
+I recently researched the uses of Angular.js, Node.js, and React.js and if there
+was a third segment it would probably be geared towards implemeting one of the
+above frameworks.
+
+3.) What did you learn between part 1 and part 2?
+
+So between the first and second project I learned that Javascript is super cool
+and allows you to do so many things client side. The first half of the semester
+I was convinced PHP was the way to go based on how powerful of a scripting
+language it is, but then I learned how Javascript utilizing JQuery and AJAX
+makes all of that PHP scripting look very good and be more user friendly and fast.
+
+
+4.) What did you like about this project?
+
+I was a big fan of the project and believe it's the right approach to allowing
+students to create something that is meaningful and useful. It has been very
+beneficial to me in displaying my web development skills and interests. It was
+very fun to make. 
+
+5.) How could it have been better?
+
+Based on personal interests I would've loved to have worked more in Angular.js
+or React.js a little bit at the end of the semester and I was also excited
+to work in Node.js or learn how to implement an API or use OAuth. Besides that 
+it was extremely useful and beneficial to me.
+
+P.S. I wasn't sure based on class, but I was curious if Branding Brand was
+offering summer internships. If not do you believe I have a skillset a web
+development company would be looking for?
+
+Thank you for your time if you decide to give me feedback on this. :)
