@@ -1,5 +1,6 @@
 <?php session_start(); 
-
+	
+	require 'assets/app/site_cache.php';
 	// PHP initializations
 	$page = "resume";
 
@@ -18,8 +19,8 @@
 </head>
 <body>
 	
-	<?php require_once 'nav.php'; ?>
-	<?php require_once 'header.php'; ?>
+	<?php require_once 'assets/views/nav.php'; ?>
+	<?php require_once 'assets/views/header.php'; ?>
 
 	<div class="page-wrapper">
 	
@@ -113,7 +114,7 @@
 		
 	</div>
 
-	<?php require_once 'footer.php' ?>
+	<?php require_once 'assets/views/footer.php' ?>
 	
 </body>
 </html>

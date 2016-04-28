@@ -12,11 +12,14 @@
 
 // Page Specfic Components
 @import 'components/homepage';
+	@import 'components/login';
 @import 'components/projects';
 	@import 'components/todo';
 @import 'components/extra';
 	@import 'components/player';
-@import 'components/contact';	
+@import 'components/contact';
+@import 'components/school';
+@import 'components/chatter';	
 
 // Page Footer
 @import 'components/footer';

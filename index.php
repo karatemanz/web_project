@@ -1,7 +1,16 @@
 <?php session_start(); 
 
+	require 'assets/app/site_cache.php';
 	// PHP initializations
 	$page = 'home';
+
+	if(!isset($_SESSION["user"])){
+		$no_username = true;
+	}else{
+		$user = $_SESSION["user"];
+		$no_username = false;
+	}	
+
 
  ?>
 <!DOCTYPE html>
@@ -19,8 +28,8 @@
 </head>
 <body>
 	
-	<?php require_once 'nav.php'; ?>
-	<?php require_once 'header.php'; ?>
+	<?php require_once 'assets/views/nav.php'; ?>
+	<?php require_once 'assets/views/header.php'; ?>
 
 	<div class="page-wrapper">
 	
@@ -72,6 +81,14 @@
 		
 	</div>
 
-	<?php require_once 'footer.php' ?>
+	<?php require_once 'assets/views/login.php' ?>
+	<?php require_once 'assets/views/footer.php' ?>
+
+	<?php if($no_username): ?>
+		<script>displayLogin();</script>	
+	<?php else: ?>
+		<script>hideLogin();</script>
+	<?php endif; ?>	
+
 </body>
 </html>

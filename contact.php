@@ -1,5 +1,6 @@
 <?php session_start(); 
 
+	require 'assets/app/site_cache.php';
 	// PHP initializations
 	$page = "contact";
 
@@ -18,12 +19,13 @@
 </head>
 <body>
 	
-	<?php require_once 'nav.php'; ?>
-	<?php require_once 'header.php'; ?>
+	<?php require_once 'assets/views/nav.php'; ?>
+	<?php require_once 'assets/views/header.php'; ?>
 
 	<div class="page-wrapper">
 	
-		<div class="row"><div class="contact">
+		<div class="row">
+			<div class="contact">
 
 			<h1>Contact</h1>
 			<p>
@@ -48,12 +50,13 @@
 				<br><br>
 			</ul>
 
-		</div></div>
+			</div>
+		</div>
 
 		
 	</div>
 
-	<?php require_once 'footer.php' ?>
+	<?php require_once 'assets/views/footer.php' ?>
 	
 </body>
 </html>

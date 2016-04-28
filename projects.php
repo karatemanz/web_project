@@ -1,8 +1,15 @@
 <?php session_start(); 
 
+	require 'assets/app/site_cache.php';
 	// PHP initializations
 	require_once 'assets/app/init.php';
 	$page = "projects";
+
+	if(isset($_SESSION['user'])){
+		$user = $_SESSION["user"];
+	}else{
+		header("Location: ../../index.php");	
+	}
 
  ?>
 <!DOCTYPE html>
@@ -19,8 +26,8 @@
 </head>
 <body>
 	
-	<?php require_once 'nav.php'; ?>
-	<?php require_once 'header.php'; ?>
+	<?php require_once 'assets/views/nav.php'; ?>
+	<?php require_once 'assets/views/header.php'; ?>
 
 	<div class="page-wrapper">
 			
@@ -39,7 +46,7 @@
 				</p>
 				<br>
 				
-				<?php require_once 'todo.php'; ?>
+				<div id="todo"></div>
 				<br>
 
 			</div>
@@ -147,6 +154,35 @@
 					user to play a game of hangman.
 				</p>
 				<br>
+
+				<div class="row">
+					<div class="reh-container">
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/hang_code.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/hang_loss.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/hang_man.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/hang_ui.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/hang_user.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/hang_win.png" alt=""></div>
+						</div>
+					</div>
+				</div>
+
+				<br>
+				<p>
+					You can find the this project on github by <a href="https://github.com/karatemanz/hang_man.git">clicking here</a>.
+				</p>
+				<br>
 				
 
 			</div>
@@ -166,6 +202,35 @@
 				</p>
 				<br>
 				
+				<div class="row">
+					<div class="reh-container">
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/net_dij.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/net_graph.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/net_opex.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/net_ops.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/net_prim.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/net_ui.png" alt=""></div>
+						</div>
+					</div>
+				</div>
+
+				<br>
+				<p>
+					You can find the this project on github by <a href="https://github.com/karatemanz/network_graph.git">clicking here</a>.
+				</p>
+				<br>
+
 
 			</div>
 			<hr>
@@ -181,6 +246,35 @@
 					Both sides are part of a chat client designed for us to implement both Additive(128) and Subsitution Cyphers when
 					to transfer messages between the clients and the server. RSA is implemented in the initial handshaking stages of the 
 					client-server connections.
+				</p>
+				<br>
+
+				<div class="row">
+					<div class="reh-container">
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/chat_code.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/chat_decenc.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/chat_gui.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/chat_handshake.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/chat_multiuse.png" alt=""></div>
+						</div>
+						<div class="large-2 columns">
+							<div class="reh-img"><img src="assets/img/projects/chat_rsa.png" alt=""></div>
+						</div>
+					</div>
+				</div>
+
+				<br>
+				<p>
+					You can find the this project on github by <a href="https://github.com/karatemanz/server_chat.git">clicking here</a>.
 				</p>
 				<br>
 				
@@ -204,7 +298,7 @@
 			</div>
 	</div>
 
-	<?php require_once 'footer.php'; ?>
+	<?php require_once 'assets/views/footer.php'; ?>
 	
 </body>
 </html>

@@ -340,6 +340,44 @@ header .under-text {
     .social-icon a:hover {
       background-color: #96A0C7; }
 
+.backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 20; }
+
+.login-box {
+  display: none;
+  height: 300px;
+  width: 500px;
+  background: #ddd;
+  border-radius: 10px;
+  border: 1px solid #000;
+  margin: auto;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  z-index: 20;
+  padding: 10px;
+  text-align: center;
+  color: #C5CDD2;
+  background: #0E111F;
+  -webkit-box-shadow: 7px 9px 24px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 9px 24px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 9px 24px 0px rgba(0, 0, 0, 0.75); }
+
+.login-box form input[type="text"] {
+  border-radius: 3px;
+  color: #000; }
+
+.login-box form input[type="submit"] {
+  border-radius: 3px;
+  color: #000; }
+
 .reh-container {
   height: 100%;
   weight: 100%; }
@@ -452,7 +490,7 @@ header .under-text {
 .input {
   width: 100%; }
 
-.input:focus {
+.to-do .input:focus, textarea:focus {
   outline: none; }
 
 /* BUTTONS */
@@ -539,12 +577,8 @@ header .under-text {
   justify-content: center;
   font-size: 10px;
   padding: 3px;
-  border: 3px solid #2E414C; }
-
-.back a {
-  display: block;
-  width: 100%;
-  height: 100%; }
+  border: 3px solid #2E414C;
+  cursor: pointer; }
 
 .video-thumb:hover .card {
   transform: rotateY(180deg); }
@@ -557,7 +591,7 @@ header .under-text {
   font-style: italic; }
 
 .player {
-  height: 190px;
+  height: 450px;
   width: 430px;
   background-color: #1E2125;
   -webkit-touch-callout: none;
@@ -566,149 +600,106 @@ header .under-text {
   -ms-user-select: none;
   user-select: none;
   margin: auto;
+  margin-bottom: 50px;
   position: relative;
-  top: 100px;
+  top: 200px;
   left: 150px;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%); }
-  .player ul {
-    list-style: none; }
-    .player ul li {
-      display: inline-block; }
 
-.cover {
-  position: absolute;
-  top: 0;
-  left: 0; }
-  .cover img {
-    height: 190px;
-    width: 190px; }
-
-.info h1 {
-  margin-top: 15px;
-  margin-left: 180px;
-  line-height: 0;
-  font-size: 20px; }
-.info h4 {
-  margin-left: 180px;
-  line-height: 20px;
-  color: #636367;
-  font-size: 10px; }
-.info h2 {
-  margin-left: 180px;
-  font-size: 15px; }
-
-.button-items {
-  margin-left: 180px !important; }
-
-#slider {
-  width: 182px;
-  height: 4px;
-  background: #151518;
-  border-radius: 2px; }
-  #slider div {
-    width: 4px;
-    height: 4px;
-    margin-top: 1px;
-    background: #EF6DBC;
-    border-radius: 2px; }
-
-#timer {
-  color: #494B4E;
-  line-height: 0;
-  font-size: 9pt;
-  float: right;
-  margin-top: 10px;
-  font-family: Arial, Sans-Serif; }
-
-.controls {
-  margin-top: 20px; }
-  .controls svg:nth-child(2) {
-    margin-left: 5px;
-    margin-right: 5px; }
-
-#play {
-  padding: 0 3px;
-  width: 30px;
-  height: 30px;
-  x: 0px;
-  y: 0px;
-  enable-background: new 0 0 25 25; }
-  #play g {
-    stroke: #FEFEFE;
-    stroke-width: 1;
-    stroke-miterlimit: 10; }
-    #play g path {
-      fill: #FEFEFE; }
-
-#play:hover {
-  cursor: pointer; }
-  #play:hover g {
-    stroke: #8F4DA9;
-    cursor: pointer; }
-    #play:hover g path {
-      fill: #9b59b6;
-      cursor: pointer; }
-
-.step-backward {
-  width: 18px;
-  height: 18px;
-  x: 0px;
-  y: 0px;
-  enable-background: new 0 0 25 25;
-  margin-bottom: 5px; }
-  .step-backward g polygon {
-    fill: #FEFEFE; }
-
-.step-forward {
-  width: 18px;
-  height: 18px;
-  x: 0px;
-  y: 0px;
-  enable-background: new 0 0 25 25;
-  margin-bottom: 5px; }
-  .step-forward g polygon {
-    fill: #FEFEFE; }
-
-#pause {
-  x: 0px;
-  y: 0px;
-  enable-background: new 0 0 25 25;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  margin-left: -45px;
-  cursor: pointer; }
-  #pause rect {
-    fill: white; }
-
-#pause:hover rect {
-  fill: #8F4DA9; }
-
-.step-backward g polygon:hover, .step-forward g polygon:hover {
-  fill: #EF6DBC;
-  cursor: pointer; }
-
-#skip {
-  float: right;
-  margin-top: 10px; }
-  #skip p {
-    color: #2980b9; }
-  #skip p:hover {
-    color: #e74c3c;
-    cursor: pointer; }
-
-.expend {
-  padding: 0.5px;
-  cursor: pointer; }
-  .expend svg:hover g polygon {
-    fill: #EF6DBC; }
+.widget {
+  margin-bottom: 100px; }
 
 .contact {
   text-align: center; }
 
 .contact ul li {
   list-style: none; }
+
+.acord {
+  text-align: center;
+  margin: auto;
+  max-height: 70px;
+  max-width: 99%;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  background-color: #CFCCD9;
+  padding: 20px;
+  -webkit-box-shadow: 8px 8px 11px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 8px 11px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 8px 11px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000; }
+
+.acord-content {
+  max-height: 800px;
+  max-width: 99%;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  margin: auto;
+  display: block;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px; }
+
+.chat-container {
+  padding: 10px;
+  margin: auto; }
+
+.chat {
+  margin: auto;
+  width: 400px;
+  height: 515px;
+  border: 2px solid #ddd; }
+
+.chat .chat-head {
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid #ddd; }
+
+.chat .chat-head h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: #333; }
+
+.chat .message {
+  height: 420px;
+  border-bottom: 1px solid #ddd;
+  overflow-y: scroll; }
+
+.chat .chat-foot form {
+  height: 100%;
+  width: 100%;
+  height: 50px; }
+
+.chat .chat-foot form input[type='submit'] {
+  padding: 3px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 5px; }
+
+.chat .chat-foot form input[type='text'] {
+  width: 80%;
+  height: 30px;
+  padding: 3px;
+  padding-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block; }
+
+.chat .chat-m {
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  padding: 3px; }
 
 footer {
   background-color: #020C33;

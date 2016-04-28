@@ -1,5 +1,6 @@
 <?php session_start(); 
 
+	require 'assets/app/site_cache.php';
 	// PHP initializations
 	$page = "extra";
 
@@ -14,9 +15,8 @@
 	if(isset($_GET['id'])){
 		$id = $_GET['id'];
 	}else{
-		$id = 1;
+		$id = 0;
 	}
-
 
 
  ?>
@@ -34,8 +34,8 @@
 </head>
 <body>
 	
-	<?php require_once 'nav.php'; ?>
-	<?php require_once 'header.php'; ?>
+	<?php require_once 'assets/views/nav.php'; ?>
+	<?php require_once 'assets/views/header.php'; ?>
 
 	<div class="page-wrapper">
 	
@@ -50,7 +50,7 @@
 			<br>
 			<div class="row">
 				<div class="video-container">
-					<iframe src="https://www.youtube.com/embed/<?php echo $videos[$id]; ?>?autoplay=0"></iframe>
+					<iframe id="youtube" src="https://www.youtube.com/embed/PUSneDrfeDQ?autoplay=0"></iframe>
 				</div>
 				<br>
 				<div class="video-gallery">
@@ -60,7 +60,7 @@
 								<img class="play" src="assets/img/extra/play.png" alt="">
 								<img class="thumb" src="assets/img/extra/skyzone.png" alt="">
 							</div>
-							<a href="/class/portfolio/extra.php?id=0"><div class="back"><p>Trip to skyzone video credits to Geno Leone</p></div></a>
+							<div class="back" onclick="swapMe(0)"><p>Trip to skyzone video credits to Geno Leone</p></div>
 						</div>
 					</div>
 					<div class="video-thumb">
@@ -69,7 +69,7 @@
 								<img class="play" src="assets/img/extra/play.png" alt="">
 								<img class="thumb" src="assets/img/extra/jnn.png" alt="">
 							</div>
-							<a href="/class/portfolio/extra.php?id=1"><div class="back"><p>AP U.S. history project video credits to Geno Leone</p></div></a>		
+							<div class="back" onclick="swapMe(1)"><p>AP U.S. history project video credits to Geno Leone</p></div>		
 						</div>	
 					</div>
 					<div class="video-thumb">
@@ -78,7 +78,7 @@
 								<img class="play" src="assets/img/extra/play.png" alt="">
 								<img class="thumb" src="assets/img/extra/flamingo.png" alt="">
 							</div>
-							<a href="/class/portfolio/extra.php?id=2"><div class="back"><p>Music video credits to Dan Bednardzcyk.</p></div></a>	
+							<div class="back" onclick="swapMe(2)"><p>Music video credits to Dan Bednardzcyk.</p></div>	
 						</div>	
 					</div>
 					<div class="video-thumb">
@@ -87,7 +87,7 @@
 								<img class="play" src="assets/img/extra/play.png" alt="">
 								<img class="thumb" src="assets/img/extra/chons.png" alt="">
 							</div>
-							<a href="/class/portfolio/extra.php?id=3"><div class="back"><p>Demo at St. Epiphany Church.Video credits to Lee Vercoe.</p></div></a>
+							<div class="back" onclick="swapMe(3)"><p>Demo at St. Epiphany Church.Video credits to Lee Vercoe.</p></div>
 						</div>	
 					</div>
 					<div class="video-thumb">
@@ -96,7 +96,7 @@
 								<img class="play" src="assets/img/extra/play.png" alt="">
 								<img class="thumb" src="assets/img/extra/kcamp.png" alt="">
 							</div>
-							<a href="/class/portfolio/extra.php?id=4"><div class="back">Karate Camp. Video credits to Lee Vercoe.</div></a>	
+							<div class="back" onclick="swapMe(4)">Karate Camp. Video credits to Lee Vercoe.</div>	
 						</div>	
 					</div>
 
@@ -122,7 +122,7 @@
 
 			<div class="row">
 				<div class="large-6 columns">
-					<?php require_once 'player.php'; ?>
+					<?php require_once 'assets/views/player.php'; ?>
 				</div>
 				<div class="large-6 columns">
 					<img src="assets/img/extra/SNWT_tracklist.jpg" alt="">
@@ -157,7 +157,7 @@
 		
 	</div>
 
-	<?php require_once 'footer.php'; ?>
+	<?php require_once 'assets/views/footer.php'; ?>
 	
 </body>
 </html>

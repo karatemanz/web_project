@@ -1,5 +1,6 @@
 <?php session_start(); 
 
+	require 'assets/app/site_cache.php';
 	// PHP initializations
 	$page = "school";
 
@@ -18,8 +19,8 @@
 </head>
 <body>
 	
-	<?php require_once 'nav.php'; ?>
-	<?php require_once 'header.php'; ?>
+	<?php require_once 'assets/views/nav.php'; ?>
+	<?php require_once 'assets/views/header.php'; ?>
 
 	<div class="page-wrapper">
 	
@@ -27,103 +28,117 @@
 			<h1>Schoolwork</h1>
 			<p>
 				The following serves as the list of coursework that I have taken or will take in my studies as a Computer Engineering
-				Student at the University of Pittsburgh. Check the <a href="/projects.php">projects page</a> for some samples of coding.
+				Student at the University of Pittsburgh. Check the <a href="/class/portfolio/projects.php">projects page</a> for some samples of coding.
 				The code I have written consists of Java, C, PHP, HTML/CSS, and Javascript.
 			</p>
 			<br><br>
 			<hr>
 			
+			
 			<article>
-				<h2>FRESHMAN YEAR -- University of Pittsburgh at Greensburgh <br>(2013-2014)</h2>	
+				
+				<div class="acord" onclick="acordToggle(0)"><h3>FRESHMAN YEAR -- University of Pittsburgh at Greensburgh (2013-2014)</h3></div>
+				<div class="acord-content" id="ac0">	
 				<h3>Term One:</h3>
 				<ul>
-					<li>Engineering Analysis I 		  			- ENGR 0015</li>
-					<li>General Chemistry I	+ LAB     			- CHEM 0110</li>
-					<li>Physics I (Calc)       		 		    - PHYS 0174</li>
-					<li>Calculus I             		  			- MATH 0220</li>
-					<li>English Composition I (Engr)  			- </li>
+					<li>Engineering Analysis I 		  			- ENGR   0015</li>
+					<li>General Chemistry I	+ LAB     			- CHEM   0110</li>
+					<li>Physics I (Calc)       		 		    - PHYS   0174</li>
+					<li>Calculus I             		  			- MATH   0220</li>
+					<li>English Composition I (Engr)  			- ENGCMP</li>
 				</ul>
 				<br>
 				<h3>Term Two:</h3>
 				<ul>
-					<li>Engineering Analysis II		  			- ENGR 0016</li>
-					<li>General Chemistry II + LAB	  			- CHEM 0120</li>
-					<li>Physics II (Calc) 			  			- PHYS 0174</li>
-					<li>Calculus II					  			- MATH 0230</li>
-					<li>English Composition II (Engr) 			- </li>
+					<li>Engineering Analysis II		  			- ENGR   0016</li>
+					<li>General Chemistry II + LAB	  			- CHEM   0120</li>
+					<li>Physics II (Calc) 			  			- PHYS   0174</li>
+					<li>Calculus II					  			- MATH   0230</li>
+					<li>English Composition II (Engr) 			- ENGCMP </li>
 				</ul>
+				</div>
 				<br><br>
 				<hr>
 
-				<h3>
-					TRANSFERED FROM UNIVERISTY OF PITTSBURGH AT GREENSBURGH TO THE 
-					UNIVERSITY OF PITTSBURGH MAIN CAMPUS
-				</h3>
-				<hr>
-
-				<h2>SOPHMORE YEAR -- University of Pittsburgh <br>(2014-2015)</h2>	
-				<h3>Term One:</h3>
+				<div class="acord" onclick="acordToggle(1)">
+					<h3>SOPHMORE YEAR -- University of Pittsburgh (2014-2015)</h3>
+				</div>
+				<div class="acord-content" id="ac1">	
+				<h4>Term One:</h4>
 				<ul>
 					<li>Intermediate Java Programming 			- COE  0401</li>
 					<li>Digital Logic			      			- COE  0132</li>
 					<li>Linear Circuits & Systems I   			- COE  0031</li>
 					<li>Differential Equations        			- MATH 0290</li>
-					<li>Intro. To Psycology		      			- PSY	 0010</li>
+					<li>Intro. To Psycology		      			- PSY  0010</li>
 				</ul>
 				<br>
-				<h3>Term Two:</h3>
+				<h4>Term Two:</h4>
 				<ul>
 					<li>Data Structures  		      			- COE  0445</li>
 					<li>Computer Organization		  			- COE  0147</li>
 					<li>Linear Circuits & Systems II  			- COE  0041</li>
-					<li>Social Psycology              			- </li>
+					<li>Social Psycology              			- PSY  0105</li>
 				</ul>
 				<br>
-				<h3>Term Three: (Summer 2015)</h3>
+				<h4>Term Three: (Summer 2015)</h4>
 				<ul>
-					<li>Algorithm's  		          		 	- COE  1501</li>
-					<li>Written Proffesional Communications		- </li>
+					<li>Algorithm's  		          		 	- COE    1501</li>
+					<li>Written Proffesional Communications		- ENGCMP 0400</li>
 				</ul>
+				</div>
 				<br><br>
 				<hr>
 				
-				<h2>JUNIOR YEAR -- University of Pittsburgh <br>(2015-2016)</h2>	
-				<h3>Term One:</h3>
+				<div class="acord" onclick="acordToggle(2)">
+					<h3>JUNIOR YEAR -- University of Pittsburgh (2015-2016)</h3>
+				</div>
+				<div class="acord-content" id="ac2">	
+				<h4>Term One:</h4>
 				<ul>
-					<li>Systems Software	  					- COE  0449</li>
-					<li>Digital Lab			     			    - COE  0501</li>
-					<li>Linear Algebra 	       		 		    - MATH </li>
-					<li>Microeconomics				  			- ECON </li>
+					<li>Systems Software	  					- COE   0449</li>
+					<li>Digital Lab			     			    - COE   0501</li>
+					<li>Linear Algebra 	       		 		    - MATH  0290</li>
+					<li>Microeconomics				  			- ECON  0100</li>
+					<li>Philosophy of Religion					- PHIL	0470</li>
+					<li>Marching Band							- MUSIC 0630</li>
 				</ul>
 				<br>
-				<h3>Term Two:</h3>
+				<h4>Term Two:</h4>
 				<ul>
 					<li>Programming For Web Apps.		  		- CS   1520</li>
-					<li>Advanced Digital Design		  			- COE  </li>
+					<li>Advanced Digital Design		  			- COE  1502</li>
 					<li>Computer Architecture 			  		- CS   1541</li>
 					<li>Game Theory					  			- ECON </li>
 				</ul>
+				</div>
 				<br><br>
 				<hr>
 
-				<h2>SENIOR -- University of Pittsburgh <br>(2013-2014)</h2>	
-				<h3>Term One:</h3>
+				<div class="acord" onclick="acordToggle(3)">
+					<h3>SENIOR -- University of Pittsburgh (2013-2014)</h3>
+				</div>
+				<div class="acord-content" id="ac3">	
+				<h4>Term One:</h4>
 				<ul>
-					<li>Databases			 		  			- COE  </li>
-					<li>Introduction to Networks	  			- COE  </li>
-					<li>Probability and Statistics (Engr)       - ENGR 0020</li>
-					<li>Software Engineering             		- COE  1530</li>
-					<li>Ethics						  			- </li>
+					<li>Databases			 		  			- COE  	1555</li>
+					<li>Introduction to Networks	  			- ECE  	1337</li>
+					<li>Applied Crytptogrophy					- COE  	1653</li>
+					<li>Probability and Statistics (Engr)       - ENGR 	0020</li>
+					<li>Music of the Beatles					- MUSIC 0711</li>
+					<li>History of Jazz						  	- MUSIC 0711</li>
+					<li>Marching Band							- MUSIC 0630</li>
 				</ul>
 				<br>
-				<h3>Term Two:</h3>
+				<h4>Term Two:</h4>
 				<ul>
-					<li>Compilers					  			- COE  </li>
-					<li>Operating Systems			  			- COE  </li>
+					<li>Software Engineering				    - COE  1530</li>
+					<li>Senior Design						  	- COE  </li>
 					<li>The Internet of Things 		  			- COE  </li>
-					<li>Open Elective (Embedded Sys) 			- </li>
-					<li>Open Elective (Marching Band)			- </li>
+					<li>Open Elective (Fundamental Prog) 		- CS</li>
+					<li>Open Elective (Marching Band)			- MUSIC</li>
 				</ul>
+				</div>
 				<br><br>
 				<hr>
 
@@ -136,7 +151,7 @@
 
 	</div>
 
-	<?php require_once 'footer.php' ?>
+	<?php require_once 'assets/views/footer.php' ?>
 	
 </body>
 </html>
