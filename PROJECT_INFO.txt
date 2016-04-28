@@ -26,6 +26,8 @@ BETA: This is a fun page that I made that is basically a chat client that
 allows you to chat with fellow users of my page. It is in beta because I
 did not have true means of testing multiple users on my page.
 
+OTHER: expiromented with PHP to cache pages so that when user goes back and forth
+within my sites pages the page is cached.
 
 2.) If there was a third part what would you like to implement?
 
